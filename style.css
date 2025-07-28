@@ -1,43 +1,82 @@
 body {
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  color: white;
-  font-family: 'Arial', sans-serif;
-  text-align: center;
+  margin: 0;
+  background: linear-gradient(to right, #000428, #004e92);
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
-  padding: 1rem;
-  font-size: 2rem;
-  background-color: #111;
-  box-shadow: 0 0 15px #00f0ff;
+  padding: 1.5rem;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 25px #0ff;
+  border-bottom: 2px solid #0ff;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-#game-list {
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: auto;
+}
+
+.game-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 2rem;
   padding: 2rem;
 }
 
 .game-card {
-  background: #111;
-  margin: 1rem;
-  padding: 1rem;
-  border: 2px solid #00f0ff;
+  width: 220px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #0ff;
   border-radius: 10px;
-  width: 200px;
-  box-shadow: 0 0 15px #00f0ff;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #0ff, 0 0 50px #0ff;
 }
 
 .game-card img {
   width: 100%;
-  border-radius: 5px;
+  display: block;
+  border-bottom: 1px solid #0ff;
+}
+
+.game-card h2 {
+  margin: 0;
+  padding: 1rem 0.5rem 0 0.5rem;
+  font-size: 1.2rem;
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff;
 }
 
 .game-card a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: #00f0ff;
+  display: block;
+  margin: 1rem;
+  padding: 0.5rem;
+  background-color: #0ff;
+  color: #000;
+  text-align: center;
+  border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
+  box-shadow: 0 0 10px #0ff;
+  transition: background-color 0.2s;
+}
+
+.game-card a:hover {
+  background-color: #00cfff;
 }
