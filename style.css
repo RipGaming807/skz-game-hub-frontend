@@ -1,82 +1,189 @@
+/* === BASE STYLE === */
 body {
-  margin: 0;
-  background: linear-gradient(to right, #000428, #004e92);
-  color: #fff;
   font-family: 'Orbitron', sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  transition: background 0.5s, color 0.5s;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
 }
 
+.dark-theme {
+  color: white;
+}
+
+/* === BACKGROUND OPTIONS === */
+.bg-black {
+  background-color: #121212 !important;
+}
+
+.bg-nebula {
+  background-image: url('https://i.postimg.cc/2Sws3yHG/ultra-detailed-nebula-abstract-wallpaper-4.jpg');
+}
+
+.bg-planet {
+  background-image: url('https://i.postimg.cc/rmd3hJqZ/fictional-planet-with-colourful-night-sky-stars-nebula.jpg');
+}
+
+.bg-fantasy {
+  background-image: url('https://i.postimg.cc/k4wt955h/3d-fantasy-scene-1.jpg');
+}
+
+.bg-spooky {
+  background-image: url('https://i.postimg.cc/BbXyVCsw/spooky-outdoors-background.jpg');
+}
+
+.bg-urban {
+  background-image: url('https://i.postimg.cc/zDHYpJBD/multi-dimensional-urban-space-exotic-concepts-digital-painting.jpg');
+}
+
+.bg-clouds {
+  background-image: url('https://i.postimg.cc/8z138D16/pink-cosmic-clouds-space-background.jpg');
+}
+
+/* === HEADER === */
 header {
-  padding: 1.5rem;
-  font-size: 2.5rem;
+  padding: 20px;
   text-align: center;
-  color: #0ff;
-  text-shadow: 0 0 10px #0ff, 0 0 25px #0ff;
-  border-bottom: 2px solid #0ff;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #aaa;
-  margin-top: auto;
+.glow {
+  color: #00f7ff;
+  text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff, 0 0 40px #00f7ff;
+  font-size: 2.5rem;
 }
 
-.game-list {
+/* === CONTROLS === */
+.controls {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
+  margin-top: 10px;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
+select {
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: #111;
+  color: #0ff;
+  border: 1px solid #0ff;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* === MAIN SECTION === */
+main {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+main h2 {
+  font-size: 2rem;
+  text-shadow: 0 0 8px #0ff;
+  margin-bottom: 20px;
+}
+
+/* === GAME LIST === */
+#gamesList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+/* === GAME CARD === */
 .game-card {
-  width: 220px;
-  background-color: rgba(0, 0, 0, 0.8);
-  border: 2px solid #0ff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  background-color: rgba(0, 0, 0, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,255,255,0.3);
+  width: 90%;
+  max-width: 800px;
   overflow: hidden;
-  transition: transform 0.2s ease-in-out, box-shadow 0.3s;
+  transition: transform 0.3s;
 }
 
 .game-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px #0ff, 0 0 50px #0ff;
+  transform: scale(1.02);
 }
 
-.game-card img {
+/* === THUMBNAIL CONTAINER === */
+.game-thumbnail-container {
+  position: relative;
   width: 100%;
+  height: 240px;
+  overflow: hidden;
+}
+
+.game-thumbnail-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
   border-bottom: 1px solid #0ff;
 }
 
-.game-card h2 {
-  margin: 0;
-  padding: 1rem 0.5rem 0 0.5rem;
-  font-size: 1.2rem;
-  color: #0ff;
-  text-shadow: 0 0 5px #0ff;
+/* === PLAY BUTTON === */
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  border: none;
+  font-size: 24px;
+  padding: 14px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.3s, transform 0.2s;
 }
 
-.game-card a {
-  display: block;
-  margin: 1rem;
-  padding: 0.5rem;
-  background-color: #0ff;
-  color: #000;
+.play-btn:hover {
+  background-color: #00ffff;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* === THREE DOTS MENU === */
+.three-dots {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* === FOOTER === */
+footer {
   text-align: center;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 0 10px #0ff;
-  transition: background-color 0.2s;
+  padding: 10px;
+  color: #00ffff;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+  background-color: rgba(0, 0, 0, 0.75);
+  margin-top: 40px;
 }
 
-.game-card a:hover {
-  background-color: #00cfff;
+/* === RESPONSIVE DESIGN === */
+@media screen and (max-width: 700px) {
+  .game-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .game-thumbnail-container {
+    height: 200px;
+  }
+
+  .glow {
+    font-size: 2rem;
+  }
 }
