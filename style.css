@@ -14,35 +14,14 @@ body {
   color: white;
 }
 
-/* === BACKGROUND OPTIONS === */
-.bg-black {
-  background-color: #121212 !important;
-}
-
-.bg-nebula {
-  background-image: url('https://i.postimg.cc/2Sws3yHG/ultra-detailed-nebula-abstract-wallpaper-4.jpg');
-}
-
-.bg-planet {
-  background-image: url('https://i.postimg.cc/rmd3hJqZ/fictional-planet-with-colourful-night-sky-stars-nebula.jpg');
-}
-
-.bg-fantasy {
-  background-image: url('https://i.postimg.cc/k4wt955h/3d-fantasy-scene-1.jpg');
-}
-
-.bg-spooky {
-  background-image: url('https://i.postimg.cc/BbXyVCsw/spooky-outdoors-background.jpg');
-}
-
-.bg-urban {
-  background-image: url('https://i.postimg.cc/zDHYpJBD/multi-dimensional-urban-space-exotic-concepts-digital-painting.jpg');
-}
-
-.bg-clouds {
-  background-image: url('https://i.postimg.cc/8z138D16/pink-cosmic-clouds-space-background.jpg');
-}
-
+/* === BACKGROUNDS === */
+.bg-black { background-color: #121212 !important; }
+.bg-fantasy { background-image: url('https://i.postimg.cc/k4wt955h/3d-fantasy-scene-1.jpg'); }
+.bg-spooky { background-image: url('https://i.postimg.cc/BbXyVCsw/spooky-outdoors-background.jpg'); }
+.bg-urban { background-image: url('https://i.postimg.cc/zDHYpJBD/multi-dimensional-urban-space-exotic-concepts-digital-painting.jpg'); }
+.bg-nebula { background-image: url('https://i.postimg.cc/2Sws3yHG/ultra-detailed-nebula-abstract-wallpaper-4.jpg'); }
+.bg-planet { background-image: url('https://i.postimg.cc/rmd3hJqZ/fictional-planet-with-colourful-night-sky-stars-nebula.jpg'); }
+.bg-clouds { background-image: url('https://i.postimg.cc/8z138D16/pink-cosmic-clouds-space-background.jpg'); }
 /* === HEADER === */
 header {
   padding: 20px;
